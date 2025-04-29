@@ -1,50 +1,71 @@
-a) Objective: UI + API Automation (Single United Framework)
-b) Components: WebDriver (UI) + RestAssured (API) + Extent Reports (Reports) + TestNg (Driver) + Cucumber (BDD) + WireMock (Mocking API)
-c) Maven Project -> Build Tool
-d) Flavors : Page/Service Design (Selenium + RestAssured Base) + Cucumber (With Pages) + Independent (Rest + Se + Rest/Se)
-e) Test data from external files -> JSON, Xlsx, (DB)
+<h1 align="center">Mocker</h1>
 
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/KhushalJangid/Maven-test-repo?color=56BEB8">
 
-	Library:  Event Listeners + Wrappers + Data + Report 
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/KhushalJangid/Maven-test-repo?color=56BEB8">
 
-	1) listeners -> Customized Solutions (Selenium, TestNg, ExtentReport)
-	2) rest -> RestAssured Wrapper with Reporting and Exception Handling + PreAndTest (TestNG Annotations)
-	3) selenium -> Selenium Wrapper with Reporting and Exception Handling + PreAndPost (TestNG Annotations)
-	4) utils -> Reading data from excel or json (DataInputProvider) + Reporter (HTMLReporter)
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/KhushalJangid/Maven-test-repo?color=56BEB8">
 
-	Design: Pages (Selenium) + (Cucumber)  => Runner + Features + Hooks 
+  <img alt="License" src="https://img.shields.io/github/license/KhushalJangid/Maven-test-repo?color=56BEB8">
 
-	1) pages
-	2) hooks 
+  <img alt="Github issues" src="https://img.shields.io/github/issues/KhushalJangid/Maven-test-repo?color=56BEB8" />
 
-	Tests: Selenium + REST + Mixed 
+  <img alt="Github forks" src="https://img.shields.io/github/forks/KhushalJangid/Maven-test-repo?color=56BEB8" />
 
-	1) tests.selenium
-	2) tests.rest 
+  <img alt="Github stars" src="https://img.shields.io/github/stars/KhushalJangid/Maven-test-repo?color=56BEB8" />
 
+  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=khushaljangid/Maven-test-repo&format=true">
+</p>
 
-Steps to Implement Makaia for your instance
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#question-how-to-use">How to use</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+</p>
 
-1) Download https://github.com/TestLeafInc/Makaia
-2) Extract to your workspace
-3) Import the project (Makaia)
-4) Once fully imported, confirm there are no errors !!
-5) If there are errors, 
+<br>
 
-	a) src/test/java -> lib/selenium -> WebDriverServiceImpl.java
-	   Go to line 37 -> mouse over -> change JRE 1.7 or above
-	b) If there are dependencies related errors, update Maven -> force update 
+## :dart: About
 
-6) Find the chrome version and download the chromedriver first and put them in drivers folder !
-	version: https://chromedriver.chromium.org/
-	download locally: zip -> extract it -> chromedriver.exe
-	copy it into the drivers folder !!
+A simple mock testing project based on Selenium and REST Assured in Java
 
-7) Select the testcase 3 from tests.selenium package and run it to confirm framework is ready
+## :rocket: Technologies
 
-	TC003_CreateIncidentUsingRestAndVerifyUsingSelenium
+The following tools were used in this project:
 
-If this is working fine, the next step will be !
+- [Java](https://www.java.com/en/)
+- [Maven](https://maven.apache.org/)
+- [Selenium](https://www.selenium.dev/)
+- [REST Assured](https://rest-assured.io/)
 
-a) Change it to your environment using config.properties
-b) Build another test for Create Change Request ..
+## :question: How to use
+
+Follow these steps to run the project:
+
+```bash
+# Clone this project
+$ git clone https://github.com/KhushalJangid/Maven-test-repo.git
+
+# Access
+$ cd Maven-test-repo
+
+# Download and copy a chromedriver corresponding to your OS and Chrome version,
+# into ./drivers directory
+
+# Run all tests
+$ mvn test
+
+# Run a single test
+$ mvn test -Dtest="<TestName>"
+
+```
+
+## :white_check_mark: Requirements
+
+Before starting, you need to have [Git](https://git-scm.com), [Java](https://www.java.com/en/) and [Maven](https://maven.apache.org/) installed to clone and build the Project.
+
+&#xa0;
+
+<a href="#top">Back to top</a>
