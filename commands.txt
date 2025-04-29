@@ -1,0 +1,3 @@
+mvn clean install // runs complete project
+mvn test // runs all tests one by one
+mvn test -Dtest="<TestName>" // run a single test
