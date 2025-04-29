@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -23,6 +24,7 @@ import org.testng.annotations.Parameters;
 import io.restassured.RestAssured;
 import lib.utils.DataInputProvider;
 import lib.utils.HTMLReporter;
+import lib.utils.OsUtils;
 
 public class PreAndPost extends WebDriverServiceImpl {
 
@@ -43,7 +45,7 @@ public class PreAndPost extends WebDriverServiceImpl {
 
 		// Load the properties file
 		Properties prop = new Properties();
-		prop.load(new FileInputStream(new File("./src/test/resources/config.properties")));
+		prop.load(Files.newInputStream(new File("./src/test/resources/config.properties").toPath()));
 
 		// for reports
 		startTestModule(nodes);
@@ -52,7 +54,7 @@ public class PreAndPost extends WebDriverServiceImpl {
 		HTMLReporter.svcTest = test;
 
 		// settings for launching browser
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./drivers/" + OsUtils.getDriverName());
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 
 		// Start browser
